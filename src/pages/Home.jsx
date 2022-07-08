@@ -8,6 +8,7 @@ const Home = () => {
   const {cats, isLoading} = useSelector((state)=>state.cats);
   const [isFetching, setIsFetching] = useState(false);
   const dispatch = useDispatch();
+  
 
   useEffect(() => {
     if(!cats.length){
