@@ -9,8 +9,8 @@ export const getCats = createAsyncThunk(
         `https://api.thecatapi.com/v1/images/search?limit=${limit}`
       );
       return catsList.data;
-    } catch (err) {
-      return rejectWithValue(err);
+    } catch ({message}) {
+      return rejectWithValue(message);
     }
   }
 );
