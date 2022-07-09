@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 import { getCats } from "../thunks/catsThunk";
 
 const initialState = {
-  cats:[],
+  cats:JSON.parse(localStorage.getItem('favourites') ?? []),
   isLoading: true,
   error: ''
 }
